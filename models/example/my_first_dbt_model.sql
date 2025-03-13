@@ -9,16 +9,16 @@
 
 {{ config(materialized='table') }}
 
-with source_data as (
-
-    select 1 as id
-    union all
-    select null as id
+with 
+big_data as
+(
+    select id, first_name
+    from `rosy-strata-449213-j9.thelook.anil_users`
 
 )
 
 select *
-from source_data
+from big_data
 
 /*
     Uncomment the line below to remove records with null `id` values
