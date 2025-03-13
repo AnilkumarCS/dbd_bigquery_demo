@@ -21,3 +21,16 @@ models:
             tests:
                 - unique
                 - not_null
+
+    - name: read_from_bigquery
+      description: "Reading data from Bigquery"
+      columns:
+          - name: id
+            description: "PK"
+            tests:
+                  - unique
+                  - not_null
+
+          - name: first_name
+            description: "first name of the user"
+
