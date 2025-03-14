@@ -34,3 +34,21 @@ models:
           - name: first_name
             description: "first name of the user"
 
+    - name: users
+      description: "Reading data from Bigquery"
+      columns:
+          - name: id
+            description: "PK"
+            tests:
+                  - unique
+                  - not_null
+
+          - name: name
+            description: "Name of the user"
+
+          - name: age
+            description: "age"
+
+          - name: gender
+            description: "gender"
+
